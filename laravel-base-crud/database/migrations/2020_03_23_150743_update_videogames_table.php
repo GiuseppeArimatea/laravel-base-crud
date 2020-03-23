@@ -13,7 +13,9 @@ class UpdateVideogamesTable extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('videogames', function (Blueprint $table) {
+        $table->date('Genere')->change();
+      });
     }
 
     /**
@@ -23,6 +25,8 @@ class UpdateVideogamesTable extends Migration
      */
     public function down()
     {
-        //
+      Schema::create('videogames', function (Blueprint $table) {
+        $table->string('Genere')->change();
+      });
     }
 }
