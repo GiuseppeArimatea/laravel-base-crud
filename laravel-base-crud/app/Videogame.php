@@ -11,6 +11,6 @@ class Videogame extends Model
       'Casa Produttrice',
       'Codice',
       'Prezzo',
-      'Titolo'
+      'Genere'
     ];
 }
