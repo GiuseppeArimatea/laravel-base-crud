@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Videogame;
 
 class VideogameController extends Controller
 {
@@ -13,7 +14,8 @@ class VideogameController extends Controller
      */
     public function index()
     {
-        //
+      $videogames = Videogame::all();
+      dd($videogames);
     }
 
     /**
