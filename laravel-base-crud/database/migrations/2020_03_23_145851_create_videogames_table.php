@@ -15,11 +15,11 @@ class CreateVideogamesTable extends Migration
     {
         Schema::create('videogames', function (Blueprint $table) {
             $table->id();
-            $table->string('Titolo');
-            $table->string('Casa Produttrice');
-            $table->string('Codice', 13);
-            $table->float('Prezzo', 6, 2);
-            $table->string('Genere');
+            $table->string('titolo');
+            $table->string('casa_produttrice');
+            $table->string('codice', 13);
+            $table->float('prezzo', 6, 2);
+            $table->string('genere');
             $table->timestamps();
         });
     }

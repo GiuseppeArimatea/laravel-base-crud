@@ -14,7 +14,7 @@ class UpdateVideogamesTable extends Migration
     public function up()
     {
       Schema::create('videogames', function (Blueprint $table) {
-        $table->date('Genere')->change();
+        $table->date('genere')->change();
       });
     }
 
@@ -26,7 +26,7 @@ class UpdateVideogamesTable extends Migration
     public function down()
     {
       Schema::create('videogames', function (Blueprint $table) {
-        $table->string('Genere')->change();
+        $table->string('genere')->change();
       });
     }
 }

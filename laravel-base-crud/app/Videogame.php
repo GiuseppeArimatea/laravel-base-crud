@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Videogame extends Model
 {
     protected $fillable = [
-      'Titolo',
-      'Casa Produttrice',
-      'Codice',
-      'Prezzo',
-      'Genere'
+      'titolo',
+      'casa_produttrice',
+      'codice',
+      'prezzo',
+      'genere'
     ];
 }
