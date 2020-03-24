@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 @section('header')
     <h1>Tutti i giochi</h1>
+    @if(!empty($id))
+      <div>Hai cancellato il record {{$id}}</div>
+    @endif
 @endsection
 @section('main')
 <div class="videogames">
@@ -13,6 +16,13 @@
         <li>Codice: {{$videogame->codice}}</li>
         <li>Prezzo: {{$videogame->prezzo}}</li>
         <li>Genere: {{$videogame->genere}}</li>
+        <li>
+          <form action="{{route('videogames.destroy', $videogame->id)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit">DELETE</button>
+          </form>
+        </li>
       </ul>
     </div>
   @endforeach
