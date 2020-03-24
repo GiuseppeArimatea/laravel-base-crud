@@ -15,6 +15,7 @@ class VideogameController extends Controller
     public function index()
     {
       $videogames = Videogame::all();
+      return view('videogames.index', compact('videogames'));
       dd($videogames);
     }
 
@@ -52,10 +53,16 @@ class VideogameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+     public function show($id)
+     {
+         $videogame = Videogame::find($id);
+
+         if(empty($videogame)) {
+             abort('404');
+         }
+
+         return view('videogames.show', compact('videogame'));
+     }
 
     /**
      * Show the form for editing the specified resource.
